@@ -1,0 +1,186 @@
+body {
+  font-family: 'Arial', sans-serif;
+  margin: 0;
+  padding: 20px;
+  background-color: #f4f4f9;
+  color: #333;
+}
+h1 {
+  text-align: center;
+  color: #4A90E2;
+   border-bottom: 2px solid #4A90E2;
+   position: relative;
+   display: inline;
+   left:35%;
+}
+h2 {
+  margin-top: 20px;
+ 
+  padding-bottom: 5px;
+}
+.container {
+  display: flex;
+  gap: 55px;
+}
+.column {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+textarea {
+  width: 100%;
+  padding: 10px;
+  margin: 10px 0;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  resize: none;
+}
+button {
+  padding: 10px 15px;
+  background-color: #4A90E2;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+  font-weight: bold;
+  width:105%
+}
+button:hover {
+  background-color: #357ABD;
+}
+.registers, .flags {
+  background-color: #fff;
+  border-radius: 5px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  padding: 15px;
+}
+.registers div, .flags div {
+  margin: 5px 0;
+  font-size: 16px;
+}
+#stepByStep {
+  background-color: #000000;
+  border-radius: 5px;
+  color: green;
+  padding: 15px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  white-space: pre-wrap;
+  max-height: 500px;
+  overflow-y: auto;
+  flex-grow: 1;
+  position: relative;
+  top: -40px;
+}
+.empty {
+  background-color: #f4f4f9;
+  border: 1px solid transparent;
+}
+
+
+.container {
+  display: flex;
+  justify-content: space-between;
+  padding: 20px;
+}
+
+.column {
+  width: 30%;
+}
+
+textarea {
+  width: 100%;
+  margin-bottom: 10px;
+}
+
+button {
+  padding: 10px;
+  margin-top: 10px;
+}
+
+.registers, .flags {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr); /* Adjust the number of columns here */
+  gap: 10px;
+  margin-top: 10px;
+}
+
+.register-btn, .flag-btn {
+  padding: 10px;
+  border: 1px solid #ccc;
+  background-color: #f1f1f1;
+  border-radius: 5px;
+  cursor: pointer;
+  text-align: center;
+  font-family: 'Courier New', Courier, monospace;
+  font-size: 16px;
+  font-weight: bold;
+  color: #000000;
+}
+
+.register-btn:hover, .flag-btn:hover {
+  background-color: #e0e0e0;
+}
+
+
+/* Existing styles remain unchanged */
+
+/* Add responsive styles */
+@media (max-width: 768px) {
+  .container {
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  .column {
+    width: 100%;
+  }
+
+  textarea {
+    font-size: 14px;
+  }
+
+  button {
+    font-size: 14px;
+    padding: 8px;
+  }
+
+  .registers, .flags {
+    grid-template-columns: repeat(2, 1fr); /* Adjust to fewer columns for smaller screens */
+  }
+
+  #stepByStep {
+    max-height: 300px;
+    font-size: 14px;
+  }
+}
+
+@media (max-width: 480px) {
+  h1 {
+    font-size: 18px;
+    left: 0; /* Center-align the text on very small screens */
+    display: block;
+    margin: 0 auto;
+  }
+
+  h2 {
+    font-size: 16px;
+    text-align: center;
+  }
+
+  button {
+    font-size: 12px;
+    padding: 6px;
+  }
+
+  .register-btn, .flag-btn {
+    font-size: 12px;
+    padding: 8px;
+  }
+
+  #stepByStep {
+    max-height: 200px;
+    font-size: 12px;
+  }
+}
